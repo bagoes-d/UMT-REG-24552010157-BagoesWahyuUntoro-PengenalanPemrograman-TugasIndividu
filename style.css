@@ -1,0 +1,301 @@
+/* Warna utama Barça */
+:root {
+  --barca-blue: #0b4ea2;
+  --barca-maroon: #a50044;
+  --accent: #fcb900;
+  --accent-hover: #ffe066;
+  --text-dark: #222;
+  --text-light: #ffffff;
+  --bg-light: #0088ff;
+  --card-bg: #f8f9fa;
+}
+
+/* Reset sederhana */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(135deg, var(--bg-light) 60%, #e3eafc 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, var(--barca-maroon), var(--barca-blue));
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 4px 16px rgba(11, 78, 162, 0.15);
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 28px;
+  font-weight: 600;
+  transition: color 0.2s;
+  font-size: 1.05rem;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+  text-shadow: 0 2px 8px rgba(252,185,0,0.2);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(11,78,162,0.7), rgba(165,0,68,0.7)), url("images/campnou.jpg") center/cover no-repeat;
+  color: var(--text-light);
+  text-align: center;
+  padding: 90px 20px 70px 20px;
+  border-radius: 18px;
+  margin: 28px auto 0 auto;
+  max-width: 1100px;
+  box-shadow: 0 8px 32px rgba(11,78,162,0.13);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+  color: #f3f3f3;
+}
+
+.hero-img {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin: 24px auto 18px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(11,78,162,0.12);
+  object-fit: cover;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--text-dark);
+  padding: 12px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(252,185,0,0.13);
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Section umum */
+.section {
+  padding: 48px 20px;
+  max-width: 1100px;
+  margin: 36px auto 0 auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(11,78,162,0.07);
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--barca-blue);
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Player Cards */
+.players {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  justify-items: start; /* Tambahkan ini agar card selalu di kiri */
+}
+
+.player-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(11,78,162,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1.5px solid #e3eafc;
+  max-width: 220px;
+  width: 100%;
+  margin: 0;
+}
+
+.player-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(11,78,162,0.13);
+}
+
+.player-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-bottom: 2px solid var(--barca-blue);
+  background: #e3eafc;
+  display: block;
+}
+
+.player-card h3 {
+  margin: 14px 0 6px;
+  color: var(--barca-maroon);
+  font-size: 1.25rem;
+}
+
+.player-card p {
+  color: #444;
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+/* Jadwal */
+.fixtures-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fixtures-list li {
+  background: #fff;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-left: 5px solid var(--barca-blue);
+  box-shadow: 0 2px 8px rgba(11,78,162,0.04);
+  border-radius: 7px;
+  font-size: 1.05rem;
+}
+
+/* About */
+#about p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #0b4ea2;
+  font-size: 1.08rem;
+  background: rgba(255,255,255,0.7);
+  padding: 18px 0;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background: var(--barca-blue);
+  color: var(--text-light);
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  border-radius: 14px 14px 0 0;
+  font-size: 1.05rem;
+  box-shadow: 0 -2px 12px rgba(11,78,162,0.09);
+}
+
+/* Coach Section */
+.coach-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(11,78,162,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1.5px solid #e3eafc;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.coach-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-bottom: 2px solid var(--barca-blue);
+  background: #e3eafc;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+
+.coach-info h4 {
+  margin: 14px 0 6px 0;
+  color: var(--barca-maroon);
+  font-size: 1.25rem;
+}
+
+.coach-info p {
+  color: #444;
+  margin-bottom: 18px;
+  font-size: 1rem;
+}
+
+/* Responsive coach */
+@media (max-width: 700px) {
+  .coach-section {
+    max-width: 100%;
+  }
+  .coach-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .header, .section, .hero {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+  }
+  .player-card img {
+    height: 150px;
+  }
+}
+
+/* Tengahkan judul coach */
+.coach-title {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+/* Tengahkan kotak coach */
+.coach-center {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 32px 0;
+}
+
+
