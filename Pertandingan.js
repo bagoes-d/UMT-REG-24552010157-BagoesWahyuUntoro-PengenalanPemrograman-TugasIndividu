@@ -7,7 +7,11 @@ const matches = {
     homeScore: 1,
     awayScore: 2,
     homeLogo: "image/Logo/newcastle.png",
-    awayLogo: "image/Logo/barcaaa.png"
+    awayLogo: "image/Logo/barcaaa.png",
+    scorers: {
+      home: ["Anthony Gordon 90'"],
+      away: ["Marcus Rashford 58'", "Marcus Rashford 67'"]
+    }
   },
   "barcelona-psg": {
     date: "02 Oktober 2025",
@@ -90,11 +94,19 @@ if (match) {
       <div class="team">
         <img src="${match.homeLogo}" alt="${match.home}">
         <h3>${match.home}</h3>
+        <ul class="scorers">
+          ${match.scorers?.home?.map(goal => `<li> ${goal}</li>`).join("") || ""}
+        </ul>
       </div>
+
       <div class="score">${match.homeScore} - ${match.awayScore}</div>
+
       <div class="team">
         <img src="${match.awayLogo}" alt="${match.away}">
         <h3>${match.away}</h3>
+        <ul class="scorers">
+          ${match.scorers?.away?.map(goal => `<li> ${goal}</li>`).join("") || ""}
+        </ul>
       </div>
     </div>
   </div>
