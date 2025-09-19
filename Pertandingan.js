@@ -4,8 +4,8 @@ const matches = {
     date: "19 September 2025",
     home: "Newcastle",
     away: "FC Barcelona",
-    homeScore: 0,
-    awayScore: 0,
+    homeScore: 1,
+    awayScore: 2,
     homeLogo: "image/Logo/newcastle.png",
     awayLogo: "image/Logo/barcaaa.png"
   },
