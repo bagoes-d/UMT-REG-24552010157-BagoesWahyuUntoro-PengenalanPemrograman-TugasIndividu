@@ -109,6 +109,9 @@ if (match) {
         </ul>
       </div>
     </div>
+    <div class="back-btn">
+      <button onclick="window.history.back()">⬅ Kembali</button>
+    </div>
   </div>
 `;
 } else {

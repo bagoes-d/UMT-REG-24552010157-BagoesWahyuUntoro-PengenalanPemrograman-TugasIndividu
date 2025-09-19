@@ -10,6 +10,8 @@ body {
   box-shadow: 0 4px 16px rgba(11,78,162,0.08);
   padding: 32px 24px;
   text-align: center;
+  position: relative;
+  padding-bottom: 70px;
 }
 .biodata-container img {
   width: 180px;
@@ -33,4 +35,23 @@ body {
 .biodata-container .desc {
   color: #444;
   font-size: 1rem;
+}
+
+/* Tombol kembali */
+.btn-back {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 8px 14px;
+  background: #0b4ea2;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+  background: #a50044;
+  transform: scale(1.05);
 }

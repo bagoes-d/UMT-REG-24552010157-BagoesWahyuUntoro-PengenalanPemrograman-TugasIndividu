@@ -236,6 +236,7 @@ if (data) {
         <tr><td><strong>Nomor</strong></td><td>: ${data.nomor}</td></tr>
       </table>
       <div class="desc">${data.desc}</div>
+      <a href="index.html" class="btn-back">⬅ Kembali</a>
     </div>
   `;
 } else {
